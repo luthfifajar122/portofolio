@@ -56,15 +56,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <div className="mt-auto flex gap-3 pt-2">
           <Link
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={buttonVariants({ size: "sm", className: "flex-1" })}
-          >
-            <ExternalLink />
-            Live Demo
-          </Link>
-          <Link
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
