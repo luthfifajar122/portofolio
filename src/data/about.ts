@@ -14,7 +14,7 @@ export const about = {
     {
       degree: "D3 Management Informatics",
       school: "Vocational College",
-      period: "2023 – Present",
+      period: "2024 – Present",
       description:
         "Web programming, database design, and software engineering fundamentals.",
     },

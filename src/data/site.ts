@@ -11,7 +11,7 @@ export const site = {
   resumeUrl: "/CV_1108.pdf",
   socials: {
     github: "https://github.com/luthfifajar122",
-    linkedin: "https://linkedin.com/in/username",
+    linkedin: "https://linkedin.com/in/us",
     instagram: "https://instagram.com/luthfifajarrrr",
     whatsapp: "https://wa.me/6283116406618",
   },

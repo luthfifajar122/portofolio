@@ -31,4 +31,16 @@ export const experience: ExperienceItem[] = [
       "Improved accessibility of public pages to meet WCAG AA checkpoints",
     ],
   },
+  {
+    role: "Web Developer Intern",
+    company: "PT SIMS Life Media",
+    period: "2026 – Present",
+    description:
+      "Developing and maintaining web-based applications and features as part of the Web Development team.",
+    highlights: [
+      "Developed web interfaces and features using Laravel and React",
+      "Implemented and improved data management features for company applications",
+      "Collaborated with the development team to develop and maintain web applications",
+    ],
+  },
 ];
