@@ -73,7 +73,7 @@ export default function Contact() {
     <section id="contact" className="py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="05 · Contact"
+          eyebrow=""
           title="Get in Touch"
           description="Have a project in mind or want to say hello? My inbox is always open."
         />

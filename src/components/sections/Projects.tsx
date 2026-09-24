@@ -10,7 +10,7 @@ export default function Projects() {
     <section id="projects" className="py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="03 · Projects"
+          eyebrow=""
           title="Featured Projects"
           description="A selection of things I've designed and built. More on GitHub."
         />

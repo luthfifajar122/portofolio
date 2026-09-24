@@ -10,7 +10,7 @@ export default function Experience() {
     <section id="experience" className="py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="04 · Experience"
+          eyebrow=""
           title="Experience"
           description="Where I've applied my skills so far — freelancing and team projects."
         />

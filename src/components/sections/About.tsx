@@ -15,7 +15,7 @@ export default function About() {
     <section id="about" className="py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow="01 · About"
+          eyebrow=""
           title="About Me"
           description="A quick introduction who I am, what I study, and what I'm looking for."
         />
