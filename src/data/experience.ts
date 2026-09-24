@@ -14,7 +14,6 @@ export const experience: ExperienceItem[] = [
     description:
       "Designing and building small-to-medium websites for clients: landing pages, booking systems, and simple e-commerce stores.",
     highlights: [
-      "Delivered 5+ client projects end-to-end: requirement analysis, UI, development, deployment",
       "Reduced average page load time by ~40% through image optimization and code splitting",
       "Built reusable component libraries with Tailwind CSS to speed up iteration",
     ],

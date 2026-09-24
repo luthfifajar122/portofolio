@@ -17,7 +17,7 @@ export default function About() {
         <SectionHeading
           eyebrow="01 · About"
           title="About Me"
-          description="A quick introduction — who I am, what I study, and what I'm looking for."
+          description="A quick introduction who I am, what I study, and what I'm looking for."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">

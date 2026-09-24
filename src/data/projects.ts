@@ -14,7 +14,7 @@ export const projects: Project[] = [
     description:
       "A sports field booking platform with venue search, schedule management, and secure online booking.",
     image: "/projects/kickbook.png",
-    tech: ["Next.js", "Laravel", "Tailwind CSS"],
+    tech: ["Laravel", "Tailwind CSS"],
     github: "https://github.com",
     demo: "https://example.com",
     year: "2025",
