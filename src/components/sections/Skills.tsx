@@ -81,10 +81,6 @@ export default function Skills() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="inline-flex items-center border-2 border-foreground bg-primary px-3 py-1 font-heading text-xs font-bold uppercase tracking-[0.2em] text-primary-foreground shadow-brutal-sm">
-            Technologies
-          </p>
-
           <h2 className="mt-4 font-heading text-3xl uppercase leading-[1.05] tracking-tight sm:text-4xl lg:text-5xl">
             Skills
           </h2>
