@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Download, Menu, X } from "lucide-react";
-import { BiLogoHtml5, BiLogoCss3, BiLogoJavascript } from "react-icons/bi";
-import { SiReact, SiPhp, SiMysql } from "react-icons/si";
 
 import { buttonVariants } from "@/components/ui/button";
 import ThemeToggle from "@/components/ui/theme-toggle";
@@ -80,17 +78,6 @@ export default function Navbar() {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [menuOpen]);
 
-  const SkillIcons = () => (
-    <span className="ml-2 inline-flex items-center gap-0.5 text-[0.65rem] opacity-70">
-      <BiLogoHtml5 />
-      <BiLogoCss3 />
-      <BiLogoJavascript />
-      <SiReact />
-      <SiPhp />
-      <SiMysql />
-    </span>
-  );
-
   const linkClasses = (active: boolean) =>
     cn(
       "inline-flex items-center rounded-none border-2 px-3 py-1.5 font-heading text-xs font-bold uppercase tracking-wide transition-all",
@@ -130,7 +117,6 @@ export default function Navbar() {
                   className={linkClasses(activeSection === link.href)}
                 >
                   {link.label}
-                  {link.href === "#skills" && <SkillIcons />}
                 </a>
               </li>
             ))}
@@ -192,7 +178,6 @@ export default function Navbar() {
                     )}
                   >
                     {link.label}
-                    {link.href === "#skills" && <SkillIcons />}
                   </a>
                 </li>
               ))}
