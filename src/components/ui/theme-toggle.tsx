@@ -24,7 +24,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
-      className="inline-flex size-9 items-center justify-center rounded-md text-foreground transition-colors hover:bg-muted"
+      className="inline-flex size-9 items-center justify-center rounded-none border-2 border-foreground bg-card text-foreground shadow-brutal-sm transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-brutal active:translate-x-0.5 active:translate-y-0.5 active:shadow-none motion-reduce:transform-none motion-reduce:transition-none"
     >
       {isMounted ? (
         <AnimatePresence mode="wait" initial={false}>
@@ -44,11 +44,11 @@ export default function ThemeToggle() {
             transition={{ duration: 0.2, ease: "easeOut" }}
             className="flex"
           >
-            {isDark ? <Sun className="size-5" /> : <Moon className="size-5" />}
+            {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
           </motion.span>
         </AnimatePresence>
       ) : (
-        <span className="size-5" />
+        <span className="size-4" />
       )}
     </button>
   );

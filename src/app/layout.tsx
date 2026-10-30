@@ -1,10 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo_Black, Geist, Geist_Mono } from "next/font/google";
 
 import ThemeProvider from "@/components/ui/theme-provider";
 import { site } from "@/data/site";
 
 import "./globals.css";
+
+const archivoBlack = Archivo_Black({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,8 +50,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#1a1a1a" },
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0b0b" },
+    { media: "(prefers-color-scheme: light)", color: "#fffdf5" },
   ],
   colorScheme: "dark",
 };
@@ -58,12 +64,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${archivoBlack.variable} ${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <a
           href="#main"
-          className="sr-only rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100]"
+          className="sr-only rounded-none border-2 border-foreground bg-primary px-4 py-2 font-heading font-bold uppercase tracking-wide text-primary-foreground shadow-brutal focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100]"
         >
           Skip to content
         </a>

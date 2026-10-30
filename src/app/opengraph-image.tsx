@@ -18,8 +18,9 @@ export default function OpengraphImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 24,
-          backgroundColor: "#0a0a0a",
+          gap: 28,
+          backgroundColor: "#fffdf5",
+          border: "24px solid #000000",
           fontFamily: "sans-serif",
           textAlign: "center",
         }}
@@ -27,25 +28,25 @@ export default function OpengraphImage() {
         <div
           style={{
             position: "absolute",
-            top: -120,
-            right: -120,
-            width: 420,
-            height: 420,
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(129,140,248,0.35), transparent 70%)",
+            top: 48,
+            right: 64,
+            width: 120,
+            height: 120,
+            border: "8px solid #000000",
+            backgroundColor: "#4cc9f0",
+            transform: "rotate(12deg)",
           }}
         />
         <div
           style={{
             position: "absolute",
-            bottom: -140,
-            left: -140,
-            width: 380,
-            height: 380,
+            bottom: 48,
+            left: 64,
+            width: 96,
+            height: 96,
+            border: "8px solid #000000",
             borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(56,189,248,0.25), transparent 70%)",
+            backgroundColor: "#ffd23f",
           }}
         />
 
@@ -53,32 +54,63 @@ export default function OpengraphImage() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 8,
-            padding: "8px 20px",
-            borderRadius: 999,
-            border: "1px solid rgba(255,255,255,0.15)",
-            color: "#a1a1aa",
+            gap: 10,
+            padding: "10px 22px",
+            border: "4px solid #000000",
+            backgroundColor: "#ffd23f",
+            boxShadow: "6px 6px 0 0 #000000",
+            color: "#000000",
             fontSize: 22,
+            fontWeight: 700,
           }}
         >
-          <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#34d399" }} />
+          <div
+            style={{
+              width: 12,
+              height: 12,
+              borderRadius: "50%",
+              border: "2px solid #000000",
+              backgroundColor: "#34d399",
+            }}
+          />
           {site.availability}
         </div>
 
         <div
           style={{
             display: "flex",
-            fontSize: 72,
-            fontWeight: 700,
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 16,
+            fontSize: 76,
+            fontWeight: 900,
             letterSpacing: -2,
-            color: "#fafafa",
+            color: "#000000",
+            textTransform: "uppercase",
           }}
         >
-          <span style={{ color: "#818cf8" }}>{site.firstName}</span>{" "}
-          {site.lastName}
+          <span
+            style={{
+              display: "flex",
+              padding: "4px 18px",
+              border: "6px solid #000000",
+              backgroundColor: "#4cc9f0",
+              boxShadow: "8px 8px 0 0 #000000",
+            }}
+          >
+            {site.firstName}
+          </span>
+          <span style={{ display: "flex" }}>{site.lastName}</span>
         </div>
 
-        <div style={{ fontSize: 28, color: "#a1a1aa" }}>
+        <div
+          style={{
+            fontSize: 28,
+            fontWeight: 600,
+            color: "#3f3a32",
+          }}
+        >
           {`${site.role} · ${site.location}`}
         </div>
       </div>

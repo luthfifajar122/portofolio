@@ -17,14 +17,21 @@ export default function InfoCard({
   className,
 }: InfoCardProps) {
   return (
-    <div className={cn("rounded-2xl border border-border bg-card p-6", className)}>
+    <div
+      className={cn(
+        "rounded-none border-2 border-foreground bg-card p-6 shadow-brutal",
+        className,
+      )}
+    >
       <div
         aria-hidden
-        className="mb-4 flex size-10 items-center justify-center rounded-lg bg-brand/10 text-brand"
+        className="mb-4 flex size-10 items-center justify-center rounded-none border-2 border-foreground bg-secondary text-secondary-foreground shadow-brutal-sm"
       >
         <Icon className="size-5" />
       </div>
-      <h3 className="mb-2 font-heading text-lg font-semibold">{title}</h3>
+      <h3 className="mb-2 font-heading text-lg font-bold uppercase tracking-tight">
+        {title}
+      </h3>
       {children}
     </div>
   );

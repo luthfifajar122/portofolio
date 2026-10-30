@@ -8,14 +8,16 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { buttonVariants } from "@/components/ui/button";
 import { about } from "@/data/about";
 import { site } from "@/data/site";
+import { cn } from "@/lib/utils";
 
+const factAccents = ["bg-primary", "bg-secondary"];
 
 export default function About() {
   return (
     <section id="about" className="py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow=""
+          eyebrow="Profile"
           title="About Me"
           description="A quick introduction who I am, what I study, and what I'm looking for."
         />
@@ -23,7 +25,7 @@ export default function About() {
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
             <Reveal>
-              <div className="flex flex-col gap-4 text-muted-foreground">
+              <div className="flex flex-col gap-4 rounded-none border-2 border-foreground bg-card p-6 text-muted-foreground shadow-brutal">
                 {about.bio.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -32,15 +34,18 @@ export default function About() {
 
             <Reveal delay={0.1}>
               <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                {about.facts.map((fact) => (
+                {about.facts.map((fact, index) => (
                   <div
                     key={fact.label}
-                    className="rounded-xl border border-border bg-muted/40 p-4"
+                    className={cn(
+                      "rounded-none border-2 border-foreground p-4 text-primary-foreground shadow-brutal-sm",
+                      factAccents[index % factAccents.length],
+                    )}
                   >
-                    <dt className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                    <dt className="font-heading text-[0.7rem] font-bold uppercase tracking-widest text-primary-foreground/70">
                       {fact.label}
                     </dt>
-                    <dd className="mt-1 text-sm font-medium text-foreground">
+                    <dd className="mt-1 text-sm font-semibold">
                       {fact.value}
                     </dd>
                   </div>
@@ -58,10 +63,10 @@ export default function About() {
 
             <Reveal delay={0.2}>
               <InfoCard icon={Handshake} title="Internship Availability">
-                <div className="flex items-center gap-2 text-sm font-medium">
+                <div className="flex items-center gap-2 text-sm font-semibold">
                   <span
                     aria-hidden
-                    className="size-2 rounded-full bg-emerald-400"
+                    className="size-2 rounded-full border border-foreground bg-emerald-400"
                   />
                   Available now
                 </div>
@@ -86,14 +91,16 @@ export default function About() {
               title="Education"
               className="h-full"
             >
-              <ol className="relative space-y-8 border-l border-border pl-6">
+              <ol className="relative space-y-8 border-l-4 border-foreground pl-6">
                 {about.education.map((item) => (
                   <li key={item.degree} className="relative">
                     <span
                       aria-hidden
-                      className="absolute top-1.5 -left-6 size-3 -translate-x-1/2 rounded-full border-2 border-background bg-brand"
+                      className="absolute top-1.5 -left-6 size-3 -translate-x-1/2 border-2 border-foreground bg-brand"
                     />
-                    <h4 className="font-heading font-semibold">{item.degree}</h4>
+                    <h4 className="font-heading font-bold uppercase tracking-tight">
+                      {item.degree}
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       {item.school} · {item.period}
                     </p>

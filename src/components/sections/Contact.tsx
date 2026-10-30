@@ -73,7 +73,7 @@ export default function Contact() {
     <section id="contact" className="py-24 sm:py-32">
       <Container>
         <SectionHeading
-          eyebrow=""
+          eyebrow="Say Hello"
           title="Get in Touch"
           description="Have a project in mind or want to say hello? My inbox is always open."
         />
@@ -93,8 +93,8 @@ export default function Contact() {
               <p className="text-sm text-muted-foreground">{site.location}</p>
             </InfoCard>
 
-            <div className="rounded-2xl border border-border bg-muted/40 p-6">
-              <h3 className="font-heading text-lg font-semibold">
+            <div className="rounded-none border-2 border-foreground bg-card p-6 shadow-brutal">
+              <h3 className="font-heading text-lg font-bold uppercase tracking-tight">
                 Response time
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -106,7 +106,7 @@ export default function Contact() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+            <div className="rounded-none border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
               {submitted ? (
                 <div
                   role="status"
@@ -114,9 +114,9 @@ export default function Contact() {
                 >
                   <CheckCircle2
                     aria-hidden
-                    className="size-12 text-emerald-400"
+                    className="size-12 text-emerald-500"
                   />
-                  <h3 className="font-heading text-xl font-semibold">
+                  <h3 className="font-heading text-xl font-bold uppercase tracking-tight">
                     Thanks, {values.name.split(" ")[0]}!
                   </h3>
                   <p className="max-w-sm text-sm text-muted-foreground">

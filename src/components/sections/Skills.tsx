@@ -72,35 +72,29 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="scroll-mt-24 border-t border-border py-20 sm:py-24"
+      className="scroll-mt-24 border-t-4 border-foreground py-20 sm:py-24"
     >
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        {/* Heading */}
         <motion.div
-          initial={
-            prefersReducedMotion
-              ? false
-              : { opacity: 0, y: 20 }
-          }
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-sm font-medium text-brand">
+          <p className="inline-flex items-center border-2 border-foreground bg-primary px-3 py-1 font-heading text-xs font-bold uppercase tracking-[0.2em] text-primary-foreground shadow-brutal-sm">
             Technologies
           </p>
 
-          <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="mt-4 font-heading text-3xl uppercase leading-[1.05] tracking-tight sm:text-4xl lg:text-5xl">
             Skills
           </h2>
 
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p className="mt-4 max-w-2xl text-sm font-medium leading-relaxed text-muted-foreground sm:text-base">
             Technologies and tools I use to build modern,
             responsive, and accessible web applications.
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
@@ -108,11 +102,7 @@ export default function Skills() {
             return (
               <motion.div
                 key={skill.name}
-                initial={
-                  prefersReducedMotion
-                    ? false
-                    : { opacity: 0, y: 20 }
-                }
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{
                   once: true,
@@ -122,11 +112,11 @@ export default function Skills() {
                   duration: 0.4,
                   delay: index * 0.04,
                 }}
-                className="group flex min-h-32 flex-col items-center justify-center gap-3 rounded-xl border border-border bg-background p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:bg-muted/50 hover:shadow-sm"
+                className="group flex min-h-32 flex-col items-center justify-center gap-3 rounded-none border-2 border-foreground bg-card p-5 text-center text-foreground shadow-brutal transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground hover:shadow-brutal-lg motion-reduce:transform-none motion-reduce:transition-none"
               >
-                <Icon className="size-9 text-muted-foreground transition-all duration-300 group-hover:scale-110 group-hover:text-brand" />
+                <Icon className="size-9 text-foreground transition-transform duration-300 group-hover:scale-110 group-hover:text-primary-foreground" />
 
-                <span className="text-sm font-medium text-foreground">
+                <span className="font-heading text-xs font-bold uppercase tracking-wide">
                   {skill.name}
                 </span>
               </motion.div>
